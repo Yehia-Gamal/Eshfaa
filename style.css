@@ -112,6 +112,10 @@ img {
   margin: 0 auto 15px;
 }
 
+.about .line-values {
+  margin: 0 auto 40px;
+}
+
 @media (max-width: 767px) {
   .about .row-box {
     flex-direction: column;
