@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  font-family: 'Habibi', serif;
+  /* font-family: 'Habibi', serif; */
+  font-family: sans-serif;
   overflow-x: hidden !important;
 }
 
@@ -81,10 +82,8 @@ img {
 }
 
 .about p {
-  color: #8997a7;
-  font-size: 15px;
+  font-size: 20px;
   letter-spacing: 0.5px;
-  line-height: 25px;
   padding: 10px;
 }
 
@@ -122,45 +121,17 @@ img {
   }
 }
 
-/* Preloader */
-#preloader {
-  position: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  /* change if the mask should have another color then white */
-  z-index: 99999;
-  /* makes sure it stays on top */
-}
-
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  background-image: url(images/status.gif);
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */
-}
-
 /* Whatsapp conact */
 
 .Whatsapp-conact {
-  bottom: 30px;
-  /* display: block; */
-  height: 60px;
+  bottom: 20px;
   position: fixed;
-  right: 30px;
-  width: 60px;
+  right: 20px;
   z-index: 1000;
+  width: 94px;
+  height: 94px;
+  background: #4ac534;
+  border-radius: 50%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -168,15 +139,64 @@ img {
   transition: all 0.5s;
 }
 
-.Whatsapp-conact:hover,
-.Whatsapp-conact:focus {
-  transform: scale(1.1);
+.phone-conact,
+.Whatsapp-conact {
+  position: fixed;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.Whatsapp-conact img {
-  width: 60px;
-  height: 60px;
+.phone-conact {
+  background-color: #2b76ff;
+  right: 20px;
+  bottom: 20px;
 }
+
+.Whatsapp-conact {
+  background-color: #4ac534;
+  right: 20px;
+  bottom: 80px;
+}
+
+.Whatsapp-conact i,
+.phone-conact i {
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.phone-conact i {
+  font-size: 27px;
+}
+
+.Whatsapp-conact i {
+  font-size: 37px;
+}
+
+.phone-conact:hover,
+.phone-conact:focus,
+.Whatsapp-conact:hover,
+.Whatsapp-conact:focus,
+.phone-conact:hover i,
+.phone-conact:focus i,
+.Whatsapp-conact:hover i,
+.Whatsapp-conact:focus i {
+  transform: scale(1.1) rotate(360deg);
+}
+
 
 svg:not(:root) {
   display: none;
@@ -196,6 +216,11 @@ svg:not(:root) {
   float: left;
   display: inline;
   width: 100%;
+}
+
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse {
+  max-height: 400px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -332,6 +357,7 @@ svg:not(:root) {
   font-size: 30px;
   font-weight: bold;
   margin-top: 5px;
+  padding: 14px 15px;
   width: 300px;
   text-align: left;
 }
@@ -348,6 +374,37 @@ svg:not(:root) {
 .navbar-brand>i {
   margin-right: 8px;
   font-size: 30px;
+}
+
+.lang-earth {
+  cursor: pointer;
+  text-align: center;
+}
+
+.lang-earth a {
+  padding: 10px 0 0 !important;
+  line-height: 0 !important;
+}
+
+.lang-earth a p {
+  margin: 0;
+  font-size: 0px;
+}
+
+.icon-lang {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin: 15px 70px 8px 0;
+  cursor: pointer;
+}
+
+.icon-lang button {
+  color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
 }
 
 /*--------------------*/
@@ -597,6 +654,7 @@ svg:not(:root) {
   float: left;
   display: inline;
   width: 100%;
+  padding-top: 50px;
 }
 
 .single-top-feature {
@@ -626,6 +684,10 @@ svg:not(:root) {
   font-size: 16px;
 }
 
+p.why-eshfaa-p {
+  font-size: 22px;
+}
+
 .single-top-feature .readmore_area {
   float: none;
 }
@@ -644,6 +706,7 @@ svg:not(:root) {
 
 .opening-hours {
   background-color: #fff;
+  padding: 0 8px;
 }
 
 .opening-hours>span {
@@ -674,6 +737,11 @@ svg:not(:root) {
 
 .opening-table li div.value {
   float: right;
+}
+
+iframe.video-youtube {
+  width: 100%;
+  height: 100%;
 }
 
 /*--------------------*/
@@ -721,8 +789,8 @@ svg:not(:root) {
   display: inline-block;
   font-size: 0px;
   margin: 15px 30px;
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   text-align: center;
   position: relative;
@@ -731,11 +799,13 @@ svg:not(:root) {
 
 .service-icon-effect img {
   display: inline-block;
-  margin: -27px;
-  width: 150px;
-  height: 150px;
+  margin: 7px;
+  width: 140px;
+  height: 140px;
   position: relative;
   z-index: 1;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .service-icon-effect.onsite img {
@@ -749,9 +819,9 @@ svg:not(:root) {
 }
 
 .service-icon-effect .icon-mid {
-  width: 180px;
-  height: 70px;
-  margin: 9px -42px;
+  width: 100px;
+  height: 100px;
+  margin: 24px 11px;
 }
 
 .service-icon-effect:after {
@@ -950,7 +1020,7 @@ svg:not(:root) {
 /*--------------------*/
 
 #counterSection {
-  background-image: url(images/counter-bg2.WebP);
+  background-image: url(images/gallery/counter-bg2.WebP);
   background-repeat: no-repeat;
   background-position: 100%;
   background-color: #222;
@@ -1082,7 +1152,6 @@ svg:not(:root) {
   position: relative;
   overflow: hidden;
   margin: 5px;
-  background: #333;
 }
 
 .doctors-nav figure img {
@@ -1092,7 +1161,7 @@ svg:not(:root) {
   height: 335px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   filter: alpha(opacity=70);
-  opacity: 0.7;
+  opacity: 1;
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
@@ -1169,8 +1238,13 @@ svg:not(:root) {
 .doctors-nav figcaption h2,
 .doctors-nav figcaption p,
 .doctors-nav figure button {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -moz-transform: translatey(0);
+  -ms-transform: translatey(0);
+  -o-transform: translatey(0);
+  -webkit-transform: translatey(0);
+  transform: translatey(0)
 }
 
 /* Style for SVG */
@@ -1207,7 +1281,7 @@ svg:not(:root) {
 }
 
 .doctors-nav a:hover figcaption p {
-  opacity: 0;
+  opacity: 1;
 }
 
 .doctors-nav figure button,
@@ -1218,13 +1292,13 @@ svg:not(:root) {
   background: transparent;
   color: #fff;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  opacity: 0;
-  -moz-transform: translatey(-50%) translatex(-50%) scale(0.25);
-  -ms-transform: translatey(-50%) translatex(-50%) scale(0.25);
-  -o-transform: translatey(-50%) translatex(-50%) scale(0.25);
-  -webkit-transform: translatey(-50%) translatex(-50%) scale(0.25);
-  transform: translatey(-50%) translatex(-50%) scale(0.25)
+  filter: alpha(opacity=1);
+  opacity: 1;
+  -moz-transform: translatey(-50%) translatex(-50%) scale(1);
+  -ms-transform: translatey(-50%) translatex(-50%) scale(1);
+  -o-transform: translatey(-50%) translatex(-50%) scale(1);
+  -webkit-transform: translatey(-50%) translatex(-50%) scale(1);
+  transform: translatey(-50%) translatex(-50%) scale(1);
 }
 
 .doctors-nav a:hover figure button,
@@ -1284,7 +1358,7 @@ svg:not(:root) {
 }
 
 .doctors-nav .slick-next {
-  background-image: url("images/team-next-icon.png");
+  background-image: url("images/icons/team-next-icon.WebP");
   background-position: center center;
   background-repeat: no-repeat;
   color: #fff;
@@ -1292,7 +1366,7 @@ svg:not(:root) {
 }
 
 .doctors-nav .slick-prev {
-  background-image: url("images/team-prev-icon.png");
+  background-image: url("images/icons/team-prev-icon.WebP");
   background-position: center center;
   background-repeat: no-repeat;
   color: #fff;
@@ -1375,8 +1449,8 @@ svg:not(:root) {
 }
 
 .p-success {
-  color: #8997a7;
-  font-size: 15px;
+  color: #21272a;
+  font-size: 20px;
   letter-spacing: 0.5px;
   line-height: 25px;
   width: 80%;
@@ -1449,10 +1523,10 @@ svg:not(:root) {
 }
 
 @media (max-width: 767px) {
-  .testimonial-img>img {
-    /* max-width: 100%;
-    max-height: 100%; */
-  }
+  /* .testimonial-img>img {
+    max-width: 100%;
+    max-height: 100%;
+  } */
 
   .testimonial-img {
     max-width: 100%;
@@ -1549,7 +1623,12 @@ svg:not(:root) {
 .single-Blog {
   float: left;
   display: inline;
+  position: relative;
   width: 100%;
+  min-height: 590px;
+  border: 1px solid #9e9e9e;
+  border-radius: 6px;
+  padding: 10px;
 }
 
 .single-blog-left {
@@ -1606,9 +1685,9 @@ svg:not(:root) {
   width: 100%;
 }
 
-figure.blog-figure {
-  /*background: #3498db;*/
-}
+/* figure.blog-figure {
+  background: #3498db;
+} */
 
 figure.blog-figure img {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
@@ -1696,7 +1775,8 @@ figure.blog-figure:hover .image-effect::before {
 .blog-author>ul>li {
   display: inline-block;
   padding: 5px;
-  color: #aaa;
+  color: var(--blue-theme);
+  font-size: 16px;
 }
 
 .blog-content {
@@ -1728,7 +1808,9 @@ figure.blog-figure:hover .image-effect::before {
 }
 
 .blog-content .readmore_area {
-  margin-top: 25px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 /*--------------------*/
@@ -1747,7 +1829,7 @@ figure.blog-figure:hover .image-effect::before {
   display: inline;
   float: left;
   min-height: 100px;
-  padding: 30px 0;
+  padding: 40px 0;
   width: 100%;
 }
 
@@ -1799,7 +1881,7 @@ figure.blog-figure:hover .image-effect::before {
 .footer-service li>a {
   color: #555;
   display: block;
-  font-size: 15px;
+  font-size: 17px;
   padding: 6px 0;
   margin: 0 0 15px;
   -moz-transition: all 0.5s;
@@ -1956,6 +2038,7 @@ i.fa.fa-angle-double-right {
 .blog-breadcrumbs-left {
   float: left;
   display: inline;
+  margin-top: -10px;
 }
 
 .blog-breadcrumbs-left>h2 {
@@ -1965,6 +2048,7 @@ i.fa.fa-angle-double-right {
 .blog-breadcrumbs-right {
   float: right;
   display: inline;
+  font-size: 20px;
 }
 
 .blog-breadcrumbs-right .breadcrumb {
@@ -1982,7 +2066,7 @@ i.fa.fa-angle-double-right {
 
 .blog-breadcrumbs-right .breadcrumb>.active {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .blogArchive-area {
@@ -2187,6 +2271,18 @@ i.fa.fa-angle-double-right {
 
 #success {
   padding-top: var(--section-background);
+}
+
+@media (max-width: 767px) {
+  #blogArchive .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .blog-breadcrumbs-right .breadcrumb {
+    margin-bottom: 10px;
+  }
 }
 
 /*--------------------*/
@@ -2634,10 +2730,7 @@ i.fa.fa-angle-double-right {
   background-color: #fff;
 }
 
-
 /* Start Blog Content */
-#blogArchive .blog-content {}
-
 #blogArchive .blog-content .box-blog {
   text-align: center;
 }
@@ -2665,10 +2758,10 @@ i.fa.fa-angle-double-right {
 
 #blogArchive .blog-content .p-blog {
   color: #6d6d6d;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6em;
   letter-spacing: 0.5px;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   text-align: start;
 }
@@ -2679,9 +2772,9 @@ i.fa.fa-angle-double-right {
 
 #blogArchive .blog-content ul.ul-blog li {
   color: #3c3c3c;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6em;
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
   text-align: start;
 }
@@ -3331,7 +3424,7 @@ a.gallery-iteam:hover .image-effect::before {
 @media(max-width:1199px) {
   .navbar-default .navbar-nav>li>a {
     padding: 20px 10px;
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .navbar-brand {
@@ -3438,10 +3531,6 @@ a.gallery-iteam:hover .image-effect::before {
     width: 70%;
   }
 
-  .blog-author>ul>li {
-    font-size: 12px;
-  }
-
   .blogArchive-area .single-blog-right {
     width: 72%;
   }
@@ -3480,7 +3569,7 @@ a.gallery-iteam:hover .image-effect::before {
 
   #header .navbar-right {
     float: none !important;
-    display: inline-block;
+    display: block;
   }
 
   .navbar-collapse.collapse {
@@ -3532,9 +3621,23 @@ a.gallery-iteam:hover .image-effect::before {
     margin-top: -5px;
   }
 
+  .icon-lang {
+    display: block;
+  }
+
   .navbar-default .navbar-nav>li>a {
     padding: 10px;
     font-size: 20px;
+  }
+
+  .menu_area.home-blog .navbar-brand {
+    padding: 15px;
+  }
+
+  .lang-earth a p {
+    font-size: 20px;
+    line-height: 20px;
+    display: inline;
   }
 
   #sliderArea {
@@ -3592,6 +3695,10 @@ a.gallery-iteam:hover .image-effect::before {
   .footer-social {
     margin-top: 20px;
     text-align: center;
+  }
+
+  .footer-top {
+    padding: 30px 0 0;
   }
 
   #blogArchive {
@@ -3694,13 +3801,13 @@ a.gallery-iteam:hover .image-effect::before {
 @media(max-width:360px) {
   .navbar-brand {
     float: left;
-    font-size: 20px;
+    font-size: 25px;
     width: 228px;
   }
 
   .navbar-default .navbar-brand {
     margin-bottom: 10px;
-    margin-top: 5px;
+    margin-top: 0px;
   }
 
   .navbar-brand>i {
@@ -3856,13 +3963,9 @@ a.gallery-iteam:hover .image-effect::before {
     font-size: 13px;
   }
 
-  .single-blog-right {}
-
   #respond input[type="text"],
   #respond input[type="email"],
   #respond input[type="url"] {
     width: 100%;
   }
-
-
 }
